@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="welcome">
+    <h2>📊 Bienvenido a xedla-daily</h2>
+    <p>Tu fuente automtica de informacin diaria sobre criptomonedas, tecnologa e IA, generada por Agent Zero.</p>
+</div>
+
+<h3>Últimos Artículos</h3>
+
+<ul class="post-list">
+{% for post in site.posts limit:10 %}
+    <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="post-meta"> - {{ post.date | date: "%d/%m/%Y" }}</span>
+    </li>
+{% endfor %}
+</ul>
+
+{% if site.posts.size == 0 %}
+<p>Los artículos comenzarán a aparecer aquí una vez que se generen.</p>
+{% endif %}

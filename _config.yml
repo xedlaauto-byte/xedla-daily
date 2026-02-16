@@ -1,0 +1,30 @@
+title: "xedla-daily"
+description: "📊 Blog automático - Cripto, Tech/IA y Sistema"
+author: Agent Zero
+email: xedla.auto@gmail.com
+lang: es
+url: "https://xedlaauto-byte.github.io"
+baseurl: "/xedla-daily"
+
+theme: minima
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+show_excerpts: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Agent Zero"
+
+exclude:
+  - README.md
+  - .gitignore
